@@ -1,0 +1,26 @@
+{
+    "fields": [
+        {
+            "name": "Qu'est-ce que la CAC ?",
+            "value": "La CAC \u00ab Chair A Canon \u00bb est un regroupement d\u2019abonn\u00e9s de la chaine Youtube Polo8 Gaming, joueurs de Squad pour la plupart d\u00e9butants et avec quelques membres plus exp\u00e9riment\u00e9s ! Son but principal est de se retrouver pour jouer ensemble, se former mutuellement, accompagner les nouveaux arrivants et les aider \u00e0 appr\u00e9hender les rudiments du jeu, et permettre aux joueurs ayant un peu plus d\u2019exp\u00e9rience en temps que Squad Leader de partager leurs savoir.",
+            "inline": false
+        },
+        {
+            "name": "Comment nous rejoindre ?",
+            "value": "Vous pouvez r\u00e9agir \u00e0 ce message avec <:oui:825709716709048341> pour acc\u00e9der \u00e0 la cat\u00e9gorie CAC enti\u00e8re. Ensuite, vous pouvez vous pr\u00e9senter bri\u00e8vement dans <#798259732032913418>, c\u2019est le salon d\u00e9di\u00e9 aux joueurs de Squad et o\u00f9 nous nous regroupons avant de jouer.",
+            "inline": false
+        },
+        {
+            "name": "Comment nous fonctionnons ?",
+            "value": "Faites quelques parties avec nos membres, et si tout s\u2019est bien pass\u00e9 vous serez valid\u00e9 et aurez l\u2019honneur d\u2019arborer le prestigieux teamtag `[CAC]` !\n\nTout membre de la CAC, une fois valid\u00e9, se doit d\u2019avoir un comportement irr\u00e9prochable sur les serveurs public, nous repr\u00e9sentons une communaut\u00e9, en aucun cas il ne serait tol\u00e9r\u00e9 que la r\u00e9putation de la communaut\u00e9 soit entach\u00e9 par le comportement d\u2019un membre de la CAC. Si n\u00e9cessaire, certains membres de la CAC se r\u00e9servent le droit d\u2019exclure un de leur membre (par processus d\u00e9mocratique).\n\nLe salon vocal \"Unit\u00e9 d'\u00e9lite\" est ouvert et accessible \u00e0 tous si vous en avez besoin. N\u2019oubliez pas ! Plus il y a de membres, plus il y a de chances que vous ayez des compagnons de jeu qui soient connect\u00e9s !",
+            "inline": false
+        }
+    ],
+    "color": 0,
+    "type": "rich",
+    "description": "Nous vous souhaitons la bienvenue sur le serveur. Nous avons l'honneur de vous pr\u00e9senter la CAC, dont vous pouvez faire partie \u00e0 tout moment ! Cependant, nous vous demandons de lire ce petit passage afin de pouvoir comprendre les buts recherch\u00e9s de la CAC.",
+    "title": "Bienvenue sur le Discord de Polo8 ! Pr\u00e9sentation du groupe CAC.",
+    "thumbnail": {
+        "url": "attachment://CAC.png"
+    }
+}
