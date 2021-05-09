@@ -179,10 +179,8 @@ class PoloCounter(Commands, commands.Cog):
     async def _update_loop(self):
         await self.bot.wait_until_red_ready()
         try:
-            testing = self.bot.get_channel(828084078321467412)
             config = await self.config.all()
             channel = self.bot.get_channel(config["inchannel"])
-            await testing.send("LOOP DEMAREE, ENVOIE/MISE A JOUR DU PREMIER MESSAGE")
             if channel is None:
                 await self.bot.send_to_owners(
                     "The channel for PoloCounter is not set, please set one in order to allow "
@@ -192,21 +190,18 @@ class PoloCounter(Commands, commands.Cog):
 
             # Obtention du message
             if config["message"]:
-                await testing.send("MESSAGE TROUVE, RECUPERATION")
                 try:
                     message = await self.fetch_message(channel, config["message"])
                 except discord.NotFound:
                     message = await self.send_message(channel)
                     if not message:
                         return
-                    await testing.send("MISE A JOUR CONFIG")
                     await self.config.message.set(message.id)
                 if not message:
                     return
 
             # On le crée si il ne l'étais pas
             else:
-                await testing.send("AUCUN MESSAGE TROUVE, CREATION")
                 message = await self.send_message(channel)
                 if not message:
                     return
@@ -216,12 +211,10 @@ class PoloCounter(Commands, commands.Cog):
             # At this point, we should have obtained the message.
             while True:
                 try:
-                    await testing.send("MISE A JOUR EN COURS")
                     await self.update_informations(
                         fetch_stats=not bool(self._statistics_cache),
                         fetch_branding=not bool(self._branding_cache),
                     )
-                    await testing.send("EDITION DU MESSAGE")
                     embed = self.build_embed(self._statistics_cache, self._branding_cache)
                     await message.edit(
                         content=None, embed=embed
@@ -236,22 +229,22 @@ class PoloCounter(Commands, commands.Cog):
                     await self.bot.send_to_owners(
                         f"Unexpected error for PoloCounter: {e}\nLoop still running."
                     )
-                await testing.send("LE MESSAGE SEMBLE EDITE")
                 await asyncio.sleep(21600)  # See you in 6 hours!
         except Exception as e:
-            await self.bot.send_to_owners(
+            mod_chan = self.bot.get_channel(798963846282084372)
+            await mod_chan.send(
+                "Une erreur est survenu lors de la mise à jour du compteur:\n" +
                 box(str("".join(format_exception(type(e),e, e.__traceback__))), lang='python')
+                + "\nPrévenez Patoche."
             )
             return
 
     async def _clean_loop(self):
         await self.bot.wait_until_red_ready()
-        testing = self.bot.get_channel(828084078321467412)
         while True:
             await asyncio.sleep(21600)
             self._statistics_cache = None
             self._branding_cache = None
-            await testing.send("CACHES SUPPRIME")
 
     def cog_unload(self):
         for task in asyncio.all_tasks():
